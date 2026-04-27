@@ -36,3 +36,14 @@
 17. Open in a browser and visually confirm the page renders.
 18. Remove or update the old `hello.js` entry point so `node hello.js` is no longer the primary command.
 19. Update `CLAUDE.md` commands section to reflect the new dev script.
+
+## Group 6 — Layout Component with Header / Main / Footer
+
+20. Create `src/components/Header.tsx` — a `<header>` element with the site name and a placeholder nav.
+21. Create `src/components/Footer.tsx` — a `<footer>` element with a brief copyright line.
+22. Create `src/components/Layout.tsx` — wraps `<Header />`, a `<main>` that accepts `children`, and `<Footer />`. Each of the three subcomponents (`Header`, `Footer`, `Layout`) lives in its own file under `src/components/`.
+    - The component's `<head>` section links to `/styles/main.css`.
+23. Create `public/styles/main.css` — base styles (reset, typography, flex-column page structure).
+24. Register Hono's `serveStatic` middleware in `src/index.tsx` to serve files from the `public/` directory.
+25. Refactor `src/pages/Home.tsx` to render its content inside `<Layout>` instead of a raw `<html>` shell.
+26. Confirm TypeScript compiles cleanly and the browser shows the styled layout with header and footer.

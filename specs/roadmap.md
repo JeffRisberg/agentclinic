@@ -4,10 +4,12 @@ Phases are intentionally small — each one is a shippable slice of work, indepe
 
 ---
 
-## Phase 1 — Hello Hono
+## Phase 1 — Hello Hono ✓
 - Install and configure Hono with `tsx` dev server
 - Single `/` route returning "AgentClinic is open for business"
 - Confirm TypeScript types work end-to-end
+- Main layout component (Header, Footer, Layout) each in their own file
+- CSS file linked via `serveStatic`
 
 ## Phase 2 — Base Layout
 - Server-side JSX layout component (header, nav, main, footer)

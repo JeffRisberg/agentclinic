@@ -10,15 +10,20 @@ Stand up the Hono server with a single working route, confirm TypeScript types w
 2. `src/index.ts` — a minimal Hono app that:
    - Listens on a configurable port (default `3000`).
    - Enables Hono's JSX renderer middleware.
+   - Serves static files from `public/` via `serveStatic`.
    - Serves `GET /` rendering the `<Home />` component.
-3. `src/pages/Home.tsx` — a JSX component with a `<title>`, `<h1>`, and brief welcome copy from the mission.
-4. TypeScript compiles cleanly (no `tsc` errors).
+3. `src/components/Header.tsx` — a `<header>` element with the site name and a placeholder nav; in its own file.
+4. `src/components/Footer.tsx` — a `<footer>` element with a copyright line; in its own file.
+5. `src/components/Layout.tsx` — wraps `<Header />`, a `<main>` that accepts `children`, and `<Footer />`; in its own file. Links to `/styles/main.css` in `<head>`.
+6. `src/pages/Home.tsx` — renders welcome content inside `<Layout>`.
+7. `public/styles/main.css` — base styles (reset, typography, flex-column page structure, header/footer colours).
+8. TypeScript compiles cleanly (no `tsc` errors).
 
 ## Out of Scope
 
 - Additional routes (health, API, etc.).
-- Database, shared layout component, navigation, CSS beyond what lands inline.
-- Auth, middleware beyond Hono's JSX renderer.
+- Database, navigation beyond a placeholder link.
+- Auth, middleware beyond Hono's JSX renderer and `serveStatic`.
 
 ## Decisions
 
