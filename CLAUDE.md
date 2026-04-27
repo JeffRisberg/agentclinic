@@ -4,10 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Minimal Node.js project (`agentclinc`) with no build step or test framework configured yet.
+Node.js project (`agentclinc`) using Hono + TypeScript with no build step required in development.
 
 ## Commands
 
 ```bash
-node hello.js      # Run the main script
+npm run dev        # Start the dev server on http://localhost:3000
+npx tsc --noEmit   # Type-check without emitting output
 ```
