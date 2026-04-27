@@ -16,7 +16,7 @@ Stand up the Hono server with a single working route, confirm TypeScript types w
 4. `src/components/Footer.tsx` — a `<footer>` element with a copyright line; in its own file.
 5. `src/components/Layout.tsx` — wraps `<Header />`, a `<main>` that accepts `children`, and `<Footer />`; in its own file. Links to `/styles/main.css` in `<head>`.
 6. `src/pages/Home.tsx` — renders welcome content inside `<Layout>`.
-7. `public/styles/main.css` — base styles (reset, typography, flex-column page structure, header/footer colours).
+7. `public/styles/main.css` — mobile-first responsive styles: CSS custom properties, reset, typography, flex-column page structure, header/footer colours, and media queries at 640 px (tablet) and 960 px (desktop).
 8. TypeScript compiles cleanly (no `tsc` errors).
 
 ## Out of Scope

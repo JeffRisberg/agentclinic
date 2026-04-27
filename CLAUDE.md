@@ -10,5 +10,6 @@ Node.js project (`agentclinc`) using Hono + TypeScript with no build step requir
 
 ```bash
 npm run dev        # Start the dev server on http://localhost:3000
+npm test           # Run Vitest test suite
 npx tsc --noEmit   # Type-check without emitting output
 ```

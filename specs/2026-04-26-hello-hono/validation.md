@@ -37,6 +37,26 @@ Open `http://localhost:3000/` in a browser. Expected: a readable page with a vis
 - `hello.js` is either removed or clearly superseded (not the documented entry point).
 - `CLAUDE.md` commands section reflects `npm run dev`, not `node hello.js`.
 
+## 6. Responsive layout
+
+Open `http://localhost:3000/` in a browser and resize the window across three widths:
+
+| Width | Expected behaviour |
+|---|---|
+| < 640 px (mobile) | Content fills the viewport with `--space-md` side padding; `h1` renders at 1.5 rem |
+| 640 px – 959 px (tablet) | Larger side padding (`--space-lg`); `h1` at 1.75 rem |
+| ≥ 960 px (desktop) | Content capped at 960 px and centred; `h1` at 2 rem |
+
+The header must remain usable at all widths (site name and nav wrap cleanly; no overflow or horizontal scroll).
+
+## 7. Tests pass
+
+```bash
+npm test
+```
+
+Expected: Vitest exits `0`; all tests in `tests/routes.test.ts` pass, including status 200, `text/html` content-type, and body containing `AgentClinic` and `<h1>`.
+
 ## Merge Criteria
 
-All five checks above pass on a clean checkout with `npm install` followed by `npm run dev`.
+All seven checks above pass on a clean checkout with `npm install` followed by `npm run dev`.

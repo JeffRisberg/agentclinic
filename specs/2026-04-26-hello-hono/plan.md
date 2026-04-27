@@ -43,7 +43,13 @@
 21. Create `src/components/Footer.tsx` — a `<footer>` element with a brief copyright line.
 22. Create `src/components/Layout.tsx` — wraps `<Header />`, a `<main>` that accepts `children`, and `<Footer />`. Each of the three subcomponents (`Header`, `Footer`, `Layout`) lives in its own file under `src/components/`.
     - The component's `<head>` section links to `/styles/main.css`.
-23. Create `public/styles/main.css` — base styles (reset, typography, flex-column page structure).
+23. Create `public/styles/main.css` — mobile-first responsive styles:
+    - CSS custom properties for colours, spacing, and `--max-width`.
+    - Reset (`box-sizing: border-box`, margins/padding zeroed).
+    - Base typography and flex-column page structure (mobile default).
+    - Header: `flex-wrap: wrap` and 44 px minimum touch-target height on nav links.
+    - `@media (min-width: 640px)` — tablet adjustments (larger margins, `h1` at 1.75 rem).
+    - `@media (min-width: 960px)` — desktop adjustments (`h1` at 2 rem).
 24. Register Hono's `serveStatic` middleware in `src/index.tsx` to serve files from the `public/` directory.
 25. Refactor `src/pages/Home.tsx` to render its content inside `<Layout>` instead of a raw `<html>` shell.
 26. Confirm TypeScript compiles cleanly and the browser shows the styled layout with header and footer.
